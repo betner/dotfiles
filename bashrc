@@ -7,6 +7,7 @@
 
 # export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 export EDITOR=/usr/bin/vim
+set -o vi
 
 alias ls='ls --color=auto'
 alias diff='diff --color=auto'
@@ -23,5 +24,8 @@ export LESS_TERMCAP_mb=$(printf '\e[1;32m')
 export LESS_TERMCAP_md=$(printf '\e[1;34m')
 export LESS_TERMCAP_us=$(printf '\e[1;32m')
 export LESS_TERMCAP_so=$(printf '\e[1;44;1m')
+
+# Ruby gem (rails etc.)
+export PATH=$PATH:$(ruby -rubygems -e "puts Gem.user_dir")/bin
 
 PS1='[\u@\h \W]\$ '
